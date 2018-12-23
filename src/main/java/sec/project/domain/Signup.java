@@ -1,5 +1,6 @@
 package sec.project.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
@@ -8,6 +9,9 @@ public class Signup extends AbstractPersistable<Long> {
 
     private String name;
     private String address;
+    @Column(unique = true)
+    private String signername;
+    private Long creditcardnumber;
 
     public Signup() {
         super();
@@ -33,6 +37,22 @@ public class Signup extends AbstractPersistable<Long> {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public void setSignername(String signername) {
+        this.signername = signername;
+    }
+
+    public String getSignername() {
+        return signername;
+    }
+
+    public Long getCreditcardnumber() {
+        return creditcardnumber;
+    }
+
+    public void setCreditcardnumber(Long creditcardnumber) {
+        this.creditcardnumber = creditcardnumber;
     }
 
 }
