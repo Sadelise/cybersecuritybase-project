@@ -6,3 +6,5 @@ password: ted
 
 teddy:
 password: ted
+
+Branch "fixes" contains some fixes, but not all.
