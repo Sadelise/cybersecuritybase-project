@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import service.SignupService;
+import sec.project.service.SignupService;
 
 @Configuration
 @EnableTransactionManagement

@@ -1,4 +1,4 @@
-package service;
+package sec.project.service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

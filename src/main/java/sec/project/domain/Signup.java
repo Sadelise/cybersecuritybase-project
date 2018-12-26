@@ -17,12 +17,14 @@ public class Signup extends AbstractPersistable<Long> {
         super();
     }
 
-    public Signup(String name, String address) {
+    public Signup(String name, String address, String signername, Long creditcardnumber) {
         this();
         this.name = name;
         this.address = address;
+        this.signername = signername;
+        this.creditcardnumber = creditcardnumber;
     }
-
+    
     public String getName() {
         return name;
     }

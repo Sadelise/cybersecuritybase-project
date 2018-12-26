@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import sec.project.domain.Signup;
 import sec.project.repository.SignupRepository;
-import service.SignupService;
+import sec.project.service.SignupService;
 
 @DependsOn("signupService")
 @Controller
