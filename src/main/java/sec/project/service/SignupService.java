@@ -13,8 +13,12 @@ public class SignupService {
     @Transactional
     public void signUp(String name, String address, String signer, Long creditcard) {
         String queryString = "INSERT INTO Signup (name, address, signername, creditcardnumber) "
-                + "VALUES ('" + name + "', '" + address + "', '" + signer + "', " + creditcard + ");";
+                + "VALUES (?, ?, ?, ?);";
         Query query = entityManager.createNativeQuery(queryString);
+        query.setParameter(1, name);
+        query.setParameter(2, address);
+        query.setParameter(3, signer);
+        query.setParameter(4, creditcard);
         query.executeUpdate();
     }
 }
