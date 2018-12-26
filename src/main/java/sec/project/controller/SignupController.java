@@ -62,10 +62,17 @@ public class SignupController {
     }
 
     @RequestMapping(value = "/userinfo/update/{username}", method = RequestMethod.POST)
-    public String updateUserInfo(Model model, @RequestParam String name, @RequestParam String address, @PathVariable String username) {
+    public String updateUserInfo(Model model, @RequestParam String name, @RequestParam String address, @RequestParam Long creditcard, @PathVariable String username) {
         Signup signup = signupRepository.findOneBySignername(username);
-        signup.setName(name);
-        signup.setAddress(address);
+        if (name != null && !name.isEmpty()) {
+            signup.setName(name);
+        }
+        if (address != null && !address.isEmpty()) {
+            signup.setAddress(address);
+        }
+        if (creditcard != null) {
+            signup.setCreditcardnumber(creditcard);
+        }
         signupRepository.save(signup);
 
         return "done";

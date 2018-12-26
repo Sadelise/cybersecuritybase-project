@@ -23,11 +23,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/h2-console/*").permitAll()
                 .anyRequest().authenticated();
-        
+
         http.formLogin()
                 .permitAll();
         http.csrf().disable();
-//        http.headers();
+        http.headers().disable()
         http.logout();
 
     }
