@@ -21,7 +21,7 @@
         <h3>Already signed up:</h3>
 
         <ul th:each="s : ${signedup}">
-            <li class="list-group-item" th:utext="${s.name}">Name
+            <li class="list-group-item" th:text="${s.name}">Name
             </li>
         </ul>
 

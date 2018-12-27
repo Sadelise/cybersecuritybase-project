@@ -6,12 +6,12 @@
     <body>
 
         <h1>Your submitted information</h1>
-        <p>Signed in as:</p><b th:utext="${signername}"></b>
+        <p>Signed in as:</p><b th:text="${signername}"></b>
 
         <ul>
-            <li class="list-group-item" th:utext="${user.name}">Name</li>
-            <li class="list-group-item" th:utext="${user.address}">Address</li>
-            <li class="list-group-item" th:utext="${user.creditcardnumber}">creditcard</li>
+            <li class="list-group-item" th:text="${user.name}">Name</li>
+            <li class="list-group-item" th:text="${user.address}">Address</li>
+            <li class="list-group-item" th:text="${user.creditcardnumber}">creditcard</li>
         </ul>
 
         <h3> Update your information:</h3>
