@@ -29,8 +29,6 @@ public class SignupController {
     @Qualifier("signupService")
     private SignupService signupService;
 
-//    @Autowired
-//    private HttpSession session;
     @RequestMapping("*")
     public String defaultMapping() {
         return "redirect:/form";
